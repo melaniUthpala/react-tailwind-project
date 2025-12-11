@@ -1,0 +1,44 @@
+type Project @table {
+  projectId: String!
+  name: String!
+  owner: User!
+  region: String
+  createdAt: Timestamp
+  updatedAt: Timestamp
+}
+
+type User @table {
+  userId: String!
+  email: String!
+  displayName: String!
+  photoUrl: String
+  createdAt: Timestamp
+  lastLoginAt: Timestamp
+}
+
+type ServiceConfiguration @table {
+  project: Project!
+  serviceType: String!
+  enabled: Boolean!
+  rulesFilePath: String
+  publicDirectory: String
+  functionsRuntime: String
+}
+
+type DeploymentTarget @table {
+  project: Project!
+  serviceConfiguration: ServiceConfiguration!
+  targetName: String!
+  publicDirectory: String!
+  rewriteRules: String
+  headers: String
+}
+
+type InitializationLog @table {
+  project: Project!
+  user: User!
+  initializedAt: Timestamp!
+  status: String!
+  details: String
+  selectedServices: [String]
+}
