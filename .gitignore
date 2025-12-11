@@ -7,10 +7,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Node modules
+node_modules/
+
+# Build and output directories
 dist
 dist-ssr
+build
+
+# Local environment files
 *.local
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +33,90 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Diagnostic reports
+report.*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+web_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint/stylelint cache
+.eslintcache
+.stylelintcache
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Parcel cache
+.cache
+.parcel-cache
+
+# Next.js
+.next
+out
+
+# Nuxt.js
+.nuxt
+dist
+
+# Gatsby
+.cache/
+
+# VuePress
+.vuepress/dist
+.temp
+.cache
+
+# VitePress
+**/.vitepress/dist
+**/.vitepress/cache
+
+# Docusaurus
+.docusaurus
+
+# Serverless
+.serverless/
+
+# FuseBox
+.fusebox/
+
+# DynamoDB Local
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# VSCode test versions
+.vscode-test
+
+# Yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
